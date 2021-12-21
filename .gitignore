@@ -1,0 +1,4 @@
+node_modules
+*.json
+# exclude from JSON flag
+!package.json
