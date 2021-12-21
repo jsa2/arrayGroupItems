@@ -15,7 +15,7 @@ var places = JSON.parse(data)
     places.data.map(place => {
         //console.log(place)
         place.postal = place.location.address.postal_code
-        place.neighbourhood = place.location.address.neighbourhood
+        place.neighbourhood = place.location.address.neighbourhood || 'no attribute for neighbourhood'
         place.tag = place.tags[0].name
     })
 
