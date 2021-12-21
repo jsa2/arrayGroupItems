@@ -30,3 +30,16 @@ There is likely multiple libraries to do this same thing, I did this mostly for 
 1. Make the sortable data available in single level (Node.JS array.map() is handy for this
 2. Decide grouping criteria
 
+```js
+   var sortedSet = newSet(places.data, ['postal','neighbourhood','tag']).sort((a,b) => {
+
+        if (a.group < b.group) {
+            return -1
+        } else {
+            return 1
+        }
+
+    })
+    console.log(sortedSet)
+```
+
